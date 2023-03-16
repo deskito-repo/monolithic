@@ -12,6 +12,7 @@ async function bootstrap() {
     AppModule,
     new FastifyAdapter({ logger: true }),
   );
+  app.getHttpAdapter().getInstance().disable('x-powered-by');
   app.register(cors, {
     origin: true,
   });
