@@ -3,6 +3,7 @@ import {
   FastifyAdapter,
   NestFastifyApplication,
 } from '@nestjs/platform-fastify';
+import helmet from '@fastify/helmet';
 import cors from '@fastify/cors';
 import { Logger } from 'nestjs-pino';
 import { AppModule } from './app.module';
@@ -12,7 +13,7 @@ async function bootstrap() {
     AppModule,
     new FastifyAdapter({ logger: true }),
   );
-  app.getHttpAdapter().getInstance().disable('x-powered-by');
+  await app.register(helmet);
   app.register(cors, {
     origin: true,
   });
