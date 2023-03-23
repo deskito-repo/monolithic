@@ -6,6 +6,7 @@ import {
 import helmet from '@fastify/helmet';
 import cors from '@fastify/cors';
 import { ConfigService } from 'nestjs-config';
+import { Logger, LoggerErrorInterceptor } from 'nestjs-pino';
 import { AppModule } from './app.module';
 import { ValidationPipe } from '@nestjs/common';
 async function bootstrap() {
