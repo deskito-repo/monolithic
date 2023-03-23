@@ -17,6 +17,7 @@ async function bootstrap() {
     new FastifyAdapter({ logger: true }),
   );
   const configService = app.get(ConfigService);
+  const logger = app.get(Logger);
   const isProd = configService.get('app.isProd');
   await app.register(helmet);
   await app.register(rateLimit, {
@@ -43,6 +44,10 @@ async function bootstrap() {
   );
   app.useGlobalInterceptors(new LoggerErrorInterceptor());
   app.useLogger(app.get(Logger));
-  await app.listen(isProd ? 80 : 3000, '0.0.0.0');
+
+  const host = '0.0.0.0';
+  const port = isProd ? 80 : 3000;
+  await app.listen(port, host);
+  logger.log(`⚡ http://${host}:${port}`);
 }
 bootstrap();
