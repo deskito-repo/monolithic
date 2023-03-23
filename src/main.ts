@@ -5,6 +5,8 @@ import {
 } from '@nestjs/platform-fastify';
 import helmet from '@fastify/helmet';
 import cors from '@fastify/cors';
+import rateLimit from '@fastify/rate-limit';
+import compressor from '@fastify/compress';
 import { ConfigService } from 'nestjs-config';
 import { Logger, LoggerErrorInterceptor } from 'nestjs-pino';
 import { AppModule } from './app.module';
@@ -15,7 +17,19 @@ async function bootstrap() {
     new FastifyAdapter({ logger: true }),
   );
   const configService = app.get(ConfigService);
+  const isProd = configService.get('app.isProd');
   await app.register(helmet);
+  await app.register(rateLimit, {
+    max: 25,
+    timeWindow: 1000,
+    allowList: isProd ? [] : ['127.0.0.1'],
+    continueExceeding: true,
+    skipOnError: true,
+    cache: 10000,
+  });
+  await app.register(compressor, {
+    global: true,
+  });
   app.register(cors, {
     origin: true,
   });
@@ -29,7 +43,6 @@ async function bootstrap() {
   );
   app.useGlobalInterceptors(new LoggerErrorInterceptor());
   app.useLogger(app.get(Logger));
-  const isProd = configService.get('app.isProd');
   await app.listen(isProd ? 80 : 3000, '0.0.0.0');
 }
 bootstrap();
