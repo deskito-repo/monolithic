@@ -21,7 +21,7 @@ async function bootstrap() {
   const isProd = configService.get('app.isProd');
   await app.register(helmet);
   await app.register(rateLimit, {
-    max: 25,
+    max: 15,
     timeWindow: 1000,
     allowList: isProd ? [] : ['127.0.0.1'],
     continueExceeding: true,
