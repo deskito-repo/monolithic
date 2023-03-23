@@ -48,6 +48,6 @@ async function bootstrap() {
   const host = '0.0.0.0';
   const port = isProd ? 80 : 3000;
   await app.listen(port, host);
-  logger.log(`⚡ http://${host}:${port}`);
+  isProd || logger.log(`⚡ http://${host}:${port}`);
 }
 bootstrap();
