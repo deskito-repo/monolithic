@@ -1,3 +1,3 @@
 export default {
-  isProd: process.env.APP_ENV !== 'production',
+  isProd: process.env.APP_ENV === 'production',
 };
