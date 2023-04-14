@@ -1,0 +1,53 @@
+name: Deploy to cloud run
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      APP_NAME: 
+      PROJECT_ID: 
+      DOCKER_IMAGE_URL: gcr.io/${{ env.PROJECT_ID }}/${{ env.APP_NAME }}:${{ github.sha }}
+    steps:
+    - name: checkout
+      uses: actions/checkout@v3
+      with:
+        ssh-key: ${{ secrets.SSH_KEY }}
+        submodules: recursive
+
+    - id: 'auth'
+      name: 'Authenticate to Google Cloud'
+      uses: 'google-github-actions/auth@v1'
+      with:
+        credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
+        
+    - name: Set up Cloud SDK
+      uses: google-github-actions/setup-gcloud@v1
+        
+    - name: Configure Docker Client
+      run:  |-
+        gcloud auth configure-docker --quiet
+    
+    - name: Build and push container image
+      id: build-image
+      uses: docker/build-push-action@v3
+      with:
+        file: ./Dockerfile
+        push: true
+        tags: ${{ env.DOCKER_IMAGE_URL }}
+        
+    - name: Deploy to Cloud Run
+      run: gcloud run deploy ${{ APP_NAME }}
+        --image ${{ env.DOCKER_IMAGE_URL }}
+        --platform managed
+        --region asia-northeast1
+        --port 80
+        --cpu=1
+        --memory=512Mi
+        --min-instances=0
+        --max-instances=10
+        --execution-environment=gen1
+        --allow-unauthenticated
+        # --no-traffic
