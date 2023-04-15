@@ -39,7 +39,7 @@ async function bootstrap() {
       transform: true,
       whitelist: true,
       forbidNonWhitelisted: true,
-      disableErrorMessages: false,
+      disableErrorMessages: isProd,
     }),
   );
   app.useGlobalInterceptors(new LoggerErrorInterceptor());
