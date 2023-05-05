@@ -11,11 +11,16 @@ import { ConfigService } from 'nestjs-config';
 import { Logger, LoggerErrorInterceptor } from 'nestjs-pino';
 import { AppModule } from './app.module';
 import { ValidationPipe } from '@nestjs/common';
+import { FastifyInstance } from 'fastify';
 async function bootstrap() {
   const app = await NestFactory.create<NestFastifyApplication>(
     AppModule,
     new FastifyAdapter({ logger: true }),
   );
+  const fastify: FastifyInstance = app.getHttpAdapter().getInstance();
+  fastify.decorateReply('setHeader', function (name: string, value: unknown) {
+    this.header(name, value);
+  });
   const configService = app.get(ConfigService);
   const logger = app.get(Logger);
   const isProd = configService.get('app.isProd');
