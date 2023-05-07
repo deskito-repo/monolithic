@@ -33,6 +33,7 @@ jobs:
       id: build-image
       uses: docker/build-push-action@v3
       with:
+        context: .
         file: ./Dockerfile
         push: true
         tags: gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE_NAME }}:${{ github.sha }}
