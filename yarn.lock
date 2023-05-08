@@ -3729,10 +3729,10 @@ nestjs-config@^1.4.10:
     reflect-metadata "^0.1.12"
     rxjs "^6.0.0"
 
-nestjs-pino@^3.1.2:
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/nestjs-pino/-/nestjs-pino-3.1.2.tgz#3c3aadba3697ddb7b95858ce662c4eb59d0b1b99"
-  integrity sha512-Rxt9v/OlHwurE2GPyBlHVjzCLCnxIPxGa+Esligij412zEcqqB6kka5MhKAk3l61u1jyTLx3Mzol+HQrR6/f9w==
+nestjs-pino@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/nestjs-pino/-/nestjs-pino-3.2.0.tgz#8cf90492e53e27765efe031bc5d020414911e3cb"
+  integrity sha512-Pi5jaOdNMCV81vbll3IrK4jW1Yri265i4T2IoFdlZf0sP8USfUSD8V9JENkMCS7vKbOXCWeeBLucxE96yM8hyA==
 
 node-abort-controller@^3.0.1:
   version "3.1.1"
@@ -4834,13 +4834,6 @@ typescript@4.9.5, typescript@^4.7.4:
   version "4.9.5"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.9.5.tgz#095979f9bcc0d09da324d58d03ce8f8374cbe65a"
   integrity sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==
-
-uid@2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/uid/-/uid-2.0.1.tgz#a3f57c962828ea65256cd622fc363028cdf4526b"
-  integrity sha512-PF+1AnZgycpAIEmNtjxGBVmKbZAQguaa4pBUq6KNaGEcpzZ2klCNZLM34tsjp76maN00TttiiUf6zkIBpJQm2A==
-  dependencies:
-    "@lukeed/csprng" "^1.0.0"
 
 uid@2.0.2:
   version "2.0.2"
