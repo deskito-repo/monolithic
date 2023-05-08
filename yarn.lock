@@ -427,10 +427,18 @@
     pump "^3.0.0"
     pumpify "^2.0.1"
 
-"@fastify/cors@8.2.0", "@fastify/cors@^8.2.0":
+"@fastify/cors@8.2.0":
   version "8.2.0"
   resolved "https://registry.yarnpkg.com/@fastify/cors/-/cors-8.2.0.tgz#44ce6b28bc111e12679cb02f980f0ce865ff4877"
   integrity sha512-qDgwpmg6C4D0D3nh8MTMuRXWyEwPnDZDBODaJv90FP2o9ukbahJByW4FtrM5Bpod5KbTf1oIExBmpItbUTQmHg==
+  dependencies:
+    fastify-plugin "^4.0.0"
+    mnemonist "0.39.5"
+
+"@fastify/cors@^8.2.1":
+  version "8.2.1"
+  resolved "https://registry.yarnpkg.com/@fastify/cors/-/cors-8.2.1.tgz#dd348162bcbfb87dff4b492e2bef32d41244006a"
+  integrity sha512-2H2MrDD3ea7g707g1CNNLWb9/tYbmw7HS+MK2SDcgjxwzbOFR93JortelTIO8DBFsZqFtEpKNxiZfSyrGgYcbw==
   dependencies:
     fastify-plugin "^4.0.0"
     mnemonist "0.39.5"
@@ -4834,13 +4842,6 @@ typescript@4.9.5, typescript@^4.7.4:
   version "4.9.5"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.9.5.tgz#095979f9bcc0d09da324d58d03ce8f8374cbe65a"
   integrity sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==
-
-uid@2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/uid/-/uid-2.0.1.tgz#a3f57c962828ea65256cd622fc363028cdf4526b"
-  integrity sha512-PF+1AnZgycpAIEmNtjxGBVmKbZAQguaa4pBUq6KNaGEcpzZ2klCNZLM34tsjp76maN00TttiiUf6zkIBpJQm2A==
-  dependencies:
-    "@lukeed/csprng" "^1.0.0"
 
 uid@2.0.2:
   version "2.0.2"
