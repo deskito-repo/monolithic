@@ -413,16 +413,16 @@
     ajv-formats "^2.1.1"
     fast-uri "^2.0.0"
 
-"@fastify/compress@^6.2.0":
-  version "6.2.0"
-  resolved "https://registry.yarnpkg.com/@fastify/compress/-/compress-6.2.0.tgz#082661f2b455fcdbe0e71c2ffa3becedfd405ed3"
-  integrity sha512-ldFaNHurMNpypkt1AlI3HDXcdIVqkuhPeYHvlVsfIzM+1YHM0qrdWgrBESuwUCxohSCJNZmyXp4FBCxVJX8zaA==
+"@fastify/compress@^6.2.1":
+  version "6.2.1"
+  resolved "https://registry.yarnpkg.com/@fastify/compress/-/compress-6.2.1.tgz#6fa90a9deb3e97d0088096b4d7e115fed0e77ce5"
+  integrity sha512-ZmdAz0AOevAJijJHVkG2JqdCuf8jb8MQhtBl8tZUz/UtQvDXNSPXRyieXoCHZ6mkETZiq72DfOA8oljC54EGjQ==
   dependencies:
     "@fastify/accept-negotiator" "^1.0.0"
     fastify-plugin "^4.0.0"
     into-stream "^6.0.0"
     mime-db "^1.51.0"
-    minipass "^3.1.6"
+    minipass "^4.0.0"
     peek-stream "^1.1.3"
     pump "^3.0.0"
     pumpify "^2.0.1"
@@ -3670,14 +3670,7 @@ minimist@^1.2.6:
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.8.tgz#c1a464e7693302e082a075cee0c057741ac4772c"
   integrity sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==
 
-minipass@^3.1.6:
-  version "3.3.6"
-  resolved "https://registry.yarnpkg.com/minipass/-/minipass-3.3.6.tgz#7bba384db3a1520d18c9c0e5251c3444e95dd94a"
-  integrity sha512-DxiNidxSEK+tHG6zOIklvNOwm3hvCrbUrdtzY74U6HKTJxvIDfOUL5W5P2Ghd3DTkhhKPYGqeNUIh5qcM4YBfw==
-  dependencies:
-    yallist "^4.0.0"
-
-minipass@^4.2.4:
+minipass@^4.0.0, minipass@^4.2.4:
   version "4.2.8"
   resolved "https://registry.yarnpkg.com/minipass/-/minipass-4.2.8.tgz#f0010f64393ecfc1d1ccb5f582bcaf45f48e1a3a"
   integrity sha512-fNzuVyifolSLFL4NzpF+wEF4qrgqaaKX0haXPQEdQ7NKAN+WecoKMHV09YcuL/DHxrUsYQOK3MiuDf7Ip2OXfQ==
