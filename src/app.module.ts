@@ -11,7 +11,7 @@ import { AppController } from './app.controller';
       imports: [ConfigModule],
       useFactory: async (configService: ConfigService) => ({
         pinoHttp: {
-          level: configService.get('app.isProd') ? 'error' : 'trace',
+          level: configService.get('app.isProd') ? 'trace' : 'error',
           transport: {
             target: 'pino-pretty',
             options: {
