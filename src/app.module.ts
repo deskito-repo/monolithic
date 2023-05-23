@@ -9,9 +9,9 @@ import { AppController } from './app.controller';
     ConfigModule.load(path.resolve(__dirname, 'config', '**/!(*.d).{ts,js}')),
     LoggerModule.forRootAsync({
       imports: [ConfigModule],
-      useFactory: async (configService: ConfigService) => ({
+      useFactory: async () => ({
         pinoHttp: {
-          level: configService.get('app.isProd') ? 'trace' : 'error',
+          level: 'trace',
           transport: {
             target: 'pino-pretty',
             options: {
