@@ -20,13 +20,14 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
+    "@binochoi/tsconfig": "^0.0.2",
     "@fastify/compress": "^6.4.0",
     "@fastify/cors": "^8.2.1",
     "@fastify/helmet": "^10.1.0",
     "@fastify/rate-limit": "^8.0.0",
-    "@nestjs/core": "^9.4.0",
     "@nestjs/cli": "^9.4.2",
     "@nestjs/common": "^9.4.0",
+    "@nestjs/core": "^9.4.0",
     "@nestjs/passport": "^9.0.1",
     "@nestjs/platform-fastify": "^9.4.3",
     "class-transformer": "^0.5.1",
