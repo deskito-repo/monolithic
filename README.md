@@ -1,1 +1,2 @@
-# Template for nest.js + fastify
+# Outline
+Nestjs + fastify template for personal projects
