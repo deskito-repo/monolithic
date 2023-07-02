@@ -15,7 +15,9 @@ import { FastifyInstance } from 'fastify';
 export default async function bootstrap() {
   const app = await NestFactory.create<NestFastifyApplication>(
     AppModule,
-    new FastifyAdapter({ logger: true }),
+    new FastifyAdapter({
+      disableRequestLogging: true,
+    }),
   );
   const configService = app.get(ConfigService);
   const logger = app.get(Logger);
