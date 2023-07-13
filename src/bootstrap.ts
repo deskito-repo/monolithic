@@ -8,9 +8,9 @@ import cors from '@fastify/cors';
 import rateLimit from '@fastify/rate-limit';
 import compressor from '@fastify/compress';
 import { ConfigService } from 'nestjs-config';
-import { AppModule } from './app.module';
 import { Logger, ValidationPipe } from '@nestjs/common';
 import { FastifyInstance, fastify as Fastify } from 'fastify';
+import { AppModule } from './app.module';
 
 const createNestServer = async (fastify: FastifyInstance) => {
   const app = await NestFactory.create<NestFastifyApplication>(
@@ -45,9 +45,11 @@ const createNestServer = async (fastify: FastifyInstance) => {
   const host = '0.0.0.0';
   const port = isProd ? 80 : 3000;
   await app.listen(port, host);
-  isProd || logger.log(`⚡ http://${host}:${port}`);
+  if (!isProd) {
+    logger.log(`⚡ http://${host}:${port}`);
+  }
   return app;
-}
+};
 
 export default () => {
   const fastify = Fastify({
