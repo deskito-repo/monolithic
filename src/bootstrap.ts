@@ -53,5 +53,5 @@ export default () => {
   const fastify = Fastify({
     disableRequestLogging: true,
   });
-  createNestServer(fastify);
+  return createNestServer(fastify);
 };
