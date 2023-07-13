@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@binochoi/tsconfig':
-    specifier: ^0.0.2
-    version: 0.0.2
+    specifier: latest
+    version: 0.0.4
   '@fastify/compress':
     specifier: ^6.4.0
     version: 6.4.0
@@ -569,8 +569,8 @@ packages:
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
     dev: true
 
-  /@binochoi/tsconfig@0.0.2:
-    resolution: {integrity: sha512-A5sv8fqeeKdyVy37Bomq74heRTPQgPErtoa/4sBEVTkaCx59KdUYvSmkoWYA/DV3jNjBShCsd8AH34+7E2tl9g==}
+  /@binochoi/tsconfig@0.0.4:
+    resolution: {integrity: sha512-QR2+SW/+1MJCdjrcIot7WwrgTd40l5e++SGMIvaP5sBTZBmHYM2JyUFsE+28rGiiTh7taRR2or/HewWhSKTLtQ==}
     engines: {node: '>=18'}
     dev: false
 

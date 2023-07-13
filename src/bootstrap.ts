@@ -10,13 +10,12 @@ import compressor from '@fastify/compress';
 import { ConfigService } from 'nestjs-config';
 import { AppModule } from './app.module';
 import { Logger, ValidationPipe } from '@nestjs/common';
-import { FastifyInstance } from 'fastify';
-export default async function bootstrap() {
+import { FastifyInstance, fastify as Fastify } from 'fastify';
+
+const createNestServer = async (fastify: FastifyInstance) => {
   const app = await NestFactory.create<NestFastifyApplication>(
     AppModule,
-    new FastifyAdapter({
-      disableRequestLogging: true,
-    }),
+    new FastifyAdapter(fastify),
   );
   const configService = app.get(ConfigService);
   const isProd = configService.get('app.isProd');
@@ -43,11 +42,6 @@ export default async function bootstrap() {
     }),
   );
 
-  const fastify: FastifyInstance = app.getHttpAdapter().getInstance();
-  fastify.decorateReply('setHeader', function (name: string, value: unknown) {
-    this.header(name, value);
-  });
-
   const logger = new Logger('bootstrap');
   const host = '0.0.0.0';
   const port = isProd ? 80 : 3000;
@@ -55,3 +49,10 @@ export default async function bootstrap() {
   isProd || logger.log(`⚡ http://${host}:${port}`);
   return app;
 }
+
+export default () => {
+  const fastify = Fastify({
+    disableRequestLogging: true,
+  });
+  createNestServer(fastify);
+};
