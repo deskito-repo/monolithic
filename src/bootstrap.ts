@@ -41,7 +41,6 @@ const createNestServer = async (fastify: FastifyInstance) => {
       disableErrorMessages: isProd,
     }),
   );
-
   const logger = new Logger('bootstrap');
   const host = '0.0.0.0';
   const port = isProd ? 80 : 3000;
