@@ -1,11 +1,17 @@
-import * as path from 'path';
 import { Module } from '@nestjs/common';
-import { ConfigModule } from 'nestjs-config';
+import { TypedConfigModule, fileLoader } from 'nest-typed-config';
 import { AppController } from './app.controller';
+import { Config } from './config';
 
 @Module({
   imports: [
-    ConfigModule.load(path.resolve(__dirname, 'config', '**/!(*.d).{ts,js}')),
+    TypedConfigModule.forRoot({
+      schema: Config,
+      load: fileLoader({
+        ignoreEnvironmentVariableSubstitution: false,
+        disallowUndefinedEnvironmentVariables: false,
+      }),
+    }),
   ],
   controllers: [AppController],
 })
