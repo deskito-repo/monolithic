@@ -19,8 +19,8 @@ const createNestServer = async (fastify: FastifyInstance) => {
   );
   const configService = app.get(ConfigService);
   const isProd = configService.get('app.isProd');
-  await app.register(helmet);
-  await app.register(rateLimit, {
+  await fastify.register(helmet);
+  await fastify.register(rateLimit, {
     max: 15,
     timeWindow: 1000,
     allowList: isProd ? [] : ['127.0.0.1'],
@@ -28,10 +28,10 @@ const createNestServer = async (fastify: FastifyInstance) => {
     skipOnError: true,
     cache: 10000,
   });
-  await app.register(compressor, {
+  await fastify.register(compressor, {
     global: true,
   });
-  app.register(cors, {
+  fastify.register(cors, {
     origin: true,
   });
   app.useGlobalPipes(
