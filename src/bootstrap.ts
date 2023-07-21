@@ -20,6 +20,12 @@ const createNestServer = async (fastify: FastifyInstance) => {
   const config = app.get(Config);
   const { isDev, isProd } = config.app;
   await fastify.register(helmet);
+  await fastify.register(compressor, {
+    global: true,
+  });
+  fastify.register(cors, {
+    origin: true,
+  });
   await fastify.register(rateLimit, {
     max: 15,
     timeWindow: 1000,
@@ -28,12 +34,7 @@ const createNestServer = async (fastify: FastifyInstance) => {
     skipOnError: true,
     cache: 10000,
   });
-  await fastify.register(compressor, {
-    global: true,
-  });
-  fastify.register(cors, {
-    origin: true,
-  });
+
   app.useGlobalPipes(
     new ValidationPipe({
       transform: true,
