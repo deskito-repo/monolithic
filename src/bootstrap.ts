@@ -8,15 +8,17 @@ import cors from '@fastify/cors';
 import rateLimit from '@fastify/rate-limit';
 import compressor from '@fastify/compress';
 import { Logger, ValidationPipe } from '@nestjs/common';
-import { FastifyInstance, fastify as Fastify } from 'fastify';
 import { AppModule } from './app.module';
 import { Config } from './config';
 
-const createNestServer = async (fastify: FastifyInstance) => {
+const createNestServer = async () => {
   const app = await NestFactory.create<NestFastifyApplication>(
     AppModule,
-    new FastifyAdapter(fastify),
+    new FastifyAdapter({
+      disableRequestLogging: true,
+    }),
   );
+  const fastify = app.getHttpAdapter().getInstance();
   const config = app.get(Config);
   const { isDev, isProd } = config.app;
   await fastify.register(helmet);
@@ -51,9 +53,4 @@ const createNestServer = async (fastify: FastifyInstance) => {
   return app;
 };
 
-export default () => {
-  const fastify = Fastify({
-    disableRequestLogging: true,
-  });
-  return createNestServer(fastify);
-};
+export default () => ({ createNestServer });

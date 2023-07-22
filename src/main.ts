@@ -1,3 +1,4 @@
 import bootstrap from './bootstrap';
 
-bootstrap();
+const { createNestServer } = bootstrap();
+createNestServer();

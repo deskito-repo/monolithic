@@ -2,7 +2,6 @@
   "extends": "@binochoi/tsconfig",
   "compilerOptions": {
     "outDir": "./dist",
-    "allowImportingTsExtensions": false,
     "baseUrl": "./",
   }
 }
