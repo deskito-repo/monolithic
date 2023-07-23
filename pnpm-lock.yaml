@@ -6,11 +6,11 @@ settings:
 
 dependencies:
   '@binochoi/eslint-config-typescript':
-    specifier: ^0.0.10
-    version: 0.0.10(@typescript-eslint/eslint-plugin@5.59.2)(eslint-config-airbnb-base@15.0.0)(eslint-plugin-import@2.27.5)
+    specifier: ^0.0.11
+    version: 0.0.11(@typescript-eslint/eslint-plugin@5.59.2)(eslint-config-airbnb-base@15.0.0)(eslint-plugin-import@2.27.5)
   '@binochoi/tsconfig':
-    specifier: ^0.0.5
-    version: 0.0.5
+    specifier: latest
+    version: 0.0.6
   '@fastify/compress':
     specifier: ^6.4.0
     version: 6.4.0
