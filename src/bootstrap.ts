@@ -46,11 +46,16 @@ const createNestServer = async () => {
   );
   const logger = new Logger('Bootstrap');
   const { host, port } = config;
-  await app.listen(port, host);
-  if (isDev) {
-    logger.log(`⚡ http://${host}:${port}`);
-  }
-  return app;
+  const boot = async () => {
+    await app.listen(port, host);
+    if (isDev) {
+      logger.log(`⚡ http://${host}:${port}`);
+    }
+    return app;
+  };
+  return {
+    boot,
+  };
 };
 
 export default () => ({ createNestServer });
