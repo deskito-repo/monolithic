@@ -20,7 +20,7 @@ const createNestServer = async () => {
   );
   const fastify = app.getHttpAdapter().getInstance();
   const config = app.get(Config);
-  const { isDev, isProd } = config.app;
+  const { isDev, isProd } = config;
   await fastify.register(helmet);
   await fastify.register(compressor, {
     global: true,
@@ -45,7 +45,7 @@ const createNestServer = async () => {
     }),
   );
   const logger = new Logger('Bootstrap');
-  const { host, port } = config.app;
+  const { host, port } = config;
   await app.listen(port, host);
   if (isDev) {
     logger.log(`⚡ http://${host}:${port}`);

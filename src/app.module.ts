@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { TypedConfigModule, fileLoader } from 'nest-typed-config';
+import { TypedConfigModule, dotenvLoader } from 'nest-typed-config';
 import { AppController } from './app.controller';
 import { Config } from './config';
 
@@ -7,9 +7,8 @@ import { Config } from './config';
   imports: [
     TypedConfigModule.forRoot({
       schema: Config,
-      load: fileLoader({
-        ignoreEnvironmentVariableSubstitution: false,
-        disallowUndefinedEnvironmentVariables: false,
+      load: dotenvLoader({
+        keyTransformer: (key: string) => key.toLowerCase(),
       }),
     }),
   ],
