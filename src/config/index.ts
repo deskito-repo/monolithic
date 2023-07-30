@@ -9,7 +9,7 @@ export class Config {
 
   @IsInt()
   @Transform(({ value }) => global.parseInt(value))
-  public readonly port: number = 80;
+  public readonly port: number = 8080;
 
   @IsString()
   public readonly env: 'dev' | 'prod' = 'prod';
