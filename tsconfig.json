@@ -1,6 +1,7 @@
 {
   "extends": "@binochoi/tsconfig",
   "compilerOptions": {
+    "module": "Node16",
     "outDir": "./dist",
     "baseUrl": "./",
   }
