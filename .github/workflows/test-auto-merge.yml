@@ -1,7 +1,21 @@
-name: Deploy to cloud run
+name: Test Auto Merge
 on:
   pull_request:
   merge_group:
 jobs:
-  deploy:
+  type-check:
     runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+        
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 20
+      - name: install pnpm
+        run: npm i -g pnpm
+      - name: Install Dependencies
+        run: pnpm i
+      - name: Try build
+        run: pnpm build
