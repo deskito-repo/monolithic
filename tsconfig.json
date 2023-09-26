@@ -1,11 +1,25 @@
 {
-  "extends": "@binochoi/tsconfig",
   "compilerOptions": {
-    "module": "Node16",
-    "outDir": "./dist",
-    "baseUrl": "./",
-    "paths": {
-      "src/*": ["./src/*"]
-    }
+    "module": "CommonJS",
+    "target": "ESNext",
+    "moduleDetection": "force",
+    "declaration": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ],
+    "sourceMap": true,
+    "incremental": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "strictPropertyInitialization": false,
+    "pretty": true,
+    "noImplicitAny": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": false,
+    "allowSyntheticDefaultImports": false
   }
 }
