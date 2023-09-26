@@ -42,6 +42,7 @@ const createNestServer = async () => {
       transform: true,
       whitelist: true,
       disableErrorMessages: isProd,
+      enableDebugMessages: isDev,
     }),
   );
   const logger = new Logger('Bootstrap');
