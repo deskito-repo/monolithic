@@ -7,6 +7,7 @@ services:
       dockerfile: ./ci/Dockerfile.dev
     ports:
       - "${PORT}:${PORT}"
+      - "${DEBUG_PORT}:${DEBUG_PORT}"
     volumes:
       - ./:/app/server
       - ../global:/app/global
