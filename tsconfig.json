@@ -6,6 +6,7 @@
     "declaration": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "noEmit": true,
     "lib": [
       "DOM",
       "DOM.Iterable",
