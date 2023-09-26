@@ -10,7 +10,6 @@ services:
       - "${DEBUG_PORT}:${DEBUG_PORT}"
     volumes:
       - ./:/app/server
-      - ../global:/app/global
       - ${GCP_KEY_PATH}:/personal/gcp-key.json
     env_file:
       - ./.env
