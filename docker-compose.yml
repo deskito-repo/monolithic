@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  nestjs:
+    container_name: nestjs
+    build:
+      dockerfile: ./ci/Dockerfile.dev
+    ports:
+      - "${PORT}:${PORT}"
+    volumes:
+      - ./:/app/server
+      - ../global:/app/global
+      - ${GCP_KEY_PATH}:/personal/gcp-key.json
+    env_file:
+      - ./.env
+    command: pnpm dev
