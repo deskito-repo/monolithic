@@ -10,6 +10,7 @@ import compressor from '@fastify/compress';
 import { Logger, ValidationPipe } from '@nestjs/common';
 import { AppModule } from './app.module';
 import { Config } from './config';
+import { AllExceptionsFilter } from './filters/all-exceptions.filter';
 
 const createNestServer = async () => {
   const app = await NestFactory.create<NestFastifyApplication>(
@@ -18,7 +19,8 @@ const createNestServer = async () => {
       disableRequestLogging: true,
     }),
   );
-  const fastify = app.getHttpAdapter().getInstance();
+  const { httpAdapter } = app.get(HttpAdapterHost);
+  const fastify = httpAdapter.getInstance();
   const config = app.get(Config);
   const { isDev, isProd } = config;
   await fastify.register(helmet);
@@ -45,7 +47,10 @@ const createNestServer = async () => {
       enableDebugMessages: isDev,
     }),
   );
-  const logger = new Logger('Bootstrap');
+
+  if (isDev) {
+    app.useGlobalFilters(new AllExceptionsFilter(httpAdapter));
+  }
   const { host, port } = config;
   const boot = async () => {
     await app.listen(port, host);
