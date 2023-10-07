@@ -22,6 +22,9 @@
     "noImplicitAny": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": false,
-    "allowSyntheticDefaultImports": false
+    "allowSyntheticDefaultImports": false,
+    "paths": {
+      "src/*": ["./src/*"],
+    },
   }
 }
