@@ -8,6 +8,7 @@ import cors from '@fastify/cors';
 import rateLimit from '@fastify/rate-limit';
 import compressor from '@fastify/compress';
 import { Logger, ValidationPipe } from '@nestjs/common';
+import fastifyCookie from '@fastify/cookie';
 import { AppModule } from './app.module';
 import { Config } from './config';
 import { AllExceptionsFilter } from './filters/all-exceptions.filter';
@@ -28,9 +29,10 @@ const createNestServer = async () => {
   await fastify.register(compressor, {
     global: true,
   });
-  fastify.register(cors, {
+  await fastify.register(cors, {
     origin: true,
   });
+  await fastify.register(fastifyCookie);
   await fastify.register(rateLimit, {
     max: 15,
     timeWindow: 1000,
