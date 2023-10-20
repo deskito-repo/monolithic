@@ -34,8 +34,8 @@ services:
       - db
     command: pnpm dev:entrypoint
     networks:
-      - namsan
+      - bridge
 
 networks:
-  namsan:
+  bridge:
     external: true
