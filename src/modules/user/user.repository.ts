@@ -4,6 +4,7 @@ import db from 'src/database/db';
 import { users, usersDetail, usersSecret } from 'src/database/schema/user';
 import * as API from '@app/global/APIs/user.api';
 import { role } from '@app/global/entities/User';
+import * as bcrypt from 'bcryptjs';
 
 @Injectable()
 export class UserRepository {
@@ -42,7 +43,6 @@ export class UserRepository {
       .where(
         eq(users.userId, userId),
       );
-    console.log(record); /* @DELETE  */
     if (record === undefined) {
       throw new NotFoundException();
     }
@@ -84,8 +84,8 @@ export class UserRepository {
       ...record.users,
       ...record.users_secret,
     };
-    // const isLegal = await bcrypt.compare(form.hashed, user.password);
-    // return isLegal;
+    const isLegal = await bcrypt.compare(form.hashed, user.password);
+    return isLegal;
   }
 
   async deleteOne(id: number) {
