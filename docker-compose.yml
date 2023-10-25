@@ -16,7 +16,7 @@ services:
     volumes:
       - .cache/.postgresql:/var/lib/postgresql
     networks:
-      - namsan
+      - bridge
   nestjs:
     container_name: nestjs
     build:
