@@ -1,4 +1,4 @@
 FROM node:21-alpine
-WORKDIR /app/server
+WORKDIR /server
 RUN npm i -g pnpm
 EXPOSE 3000
