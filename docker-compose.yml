@@ -15,7 +15,8 @@ services:
       - ./.env
     volumes:
       - .cache/.postgresql:/var/lib/postgresql
-    network_mode: bridge
+    networks:
+      - app-net
   nestjs:
     container_name: nestjs
     build:
@@ -32,8 +33,9 @@ services:
     depends_on:
       - db
     command: pnpm dev:entrypoint
-    network_mode: bridge
+    networks:
+      - app-net
 
 networks:
-  bridge:
+  app-net:
     external: true
