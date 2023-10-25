@@ -23,10 +23,5 @@
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": false,
     "allowSyntheticDefaultImports": false,
-    "baseUrl": ".",
-    "paths": {
-      "src/*": ["./src/*"],
-      "@app/global/*": ["./apps/global/*"],
-    },
   }
 }

@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import * as API from 'src/global/APIs/session.api';
+import * as API from '@app/global/APIs/session.api';
 import { SessionRepository } from './session.repository';
 
 @Injectable()

@@ -1,6 +1,6 @@
 import { ConflictException, Injectable, UnauthorizedException } from '@nestjs/common';
-import * as API from 'src/global/APIs/user.api';
-import { User, role } from 'src/global/entities/User';
+import * as API from '@app/global/APIs/user.api';
+import { User } from '@app/global/entities/User';
 import * as bcrypt from 'bcryptjs';
 import dayjs = require('dayjs');
 import { UserRepository } from './user.repository';
@@ -33,7 +33,6 @@ export class UserService {
     return this.userRepository.insertOne({
       ...user,
       password: hashed,
-      role: role.NORMAL,
       signUpYMD: dayjs().format('YYMMDD'),
     });
   }

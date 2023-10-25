@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
-import { AccessToken } from 'src/global/entities/AccessToken';
-import { RefreshToken } from 'src/global/entities/RefreshToken';
-import { User } from 'src/global/entities/User';
+import { AccessToken } from '@app/global/entities/AccessToken';
+import { RefreshToken } from '@app/global/entities/RefreshToken';
+import { User } from '@app/global/entities/User';
 
 @Injectable()
 export class TokenService {

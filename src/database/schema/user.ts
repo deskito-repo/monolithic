@@ -1,14 +1,14 @@
 import {
   varchar, serial, pgTable, smallint, integer,
 } from 'drizzle-orm/pg-core';
-import { RoleValue, schema } from '../../global/entities/User';
+import { Role, schema } from '../../../apps/global/entities/User';
 
 export const users = pgTable('users', {
   id: serial('id').primaryKey(),
   userId: varchar('user_id', {
     length: schema.userId.max,
   }).notNull().unique(),
-  role: smallint('role').$type<RoleValue>().notNull(),
+  role: smallint('role').$type<Role>().notNull(),
   nickname: varchar('nickname', {
     length: schema.nickname.max,
   }).notNull().unique(),

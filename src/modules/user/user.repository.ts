@@ -2,7 +2,8 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import { eq } from 'drizzle-orm';
 import db from 'src/database/db';
 import { users, usersDetail, usersSecret } from 'src/database/schema/user';
-import * as API from 'src/global/APIs/user.api';
+import * as API from '@app/global/APIs/user.api';
+import { role } from '@app/global/entities/User';
 
 @Injectable()
 export class UserRepository {
@@ -55,11 +56,11 @@ export class UserRepository {
   async insertOne(params: API.InsertOne.Request & { signUpYMD: string }) {
     return db.transaction(async (tx) => {
       const {
-        nickname, role, userId, password, ...restParams
+        nickname, userId, password, ...restParams
       } = params;
       const [{ id }] = await tx
         .insert(users)
-        .values({ nickname, role, userId }).returning();
+        .values({ nickname, role: role.NORMAL, userId }).returning();
       await tx
         .insert(usersSecret)
         .values({ id, password });

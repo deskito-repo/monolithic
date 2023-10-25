@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
-import * as AuthAPI from 'src/global/APIs/auth.api';
-import * as UserAPI from 'src/global/APIs/user.api';
+import * as AuthAPI from '@app/global/APIs/auth.api';
+import * as UserAPI from '@app/global/APIs/user.api';
 import { UserService } from '../user/user.service';
 import { TokenService } from './token.service';
 import { SessionService } from '../session/session.service';

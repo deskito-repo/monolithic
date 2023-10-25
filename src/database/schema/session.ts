@@ -1,8 +1,8 @@
 import {
   varchar, serial, pgTable, smallint, timestamp,
 } from 'drizzle-orm/pg-core';
-import { Session } from 'src/global/entities/Session';
-import { Role, schema } from '../../global/entities/User';
+import { Session } from '@app/global/entities/Session';
+import { Role, schema } from '../../../apps/global/entities/User';
 
 export const sessions = pgTable('sessions', {
   id: serial('id').primaryKey(),

@@ -2,7 +2,7 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import { eq } from 'drizzle-orm';
 import db from 'src/database/db';
 import { sessions } from 'src/database/schema/session';
-import * as API from 'src/global/APIs/session.api';
+import * as API from '@app/global/APIs/session.api';
 import dayjs = require('dayjs');
 
 @Injectable()
