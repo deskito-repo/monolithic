@@ -1,5 +1,7 @@
 import { IsIn, IsString } from 'class-validator';
-import { RoleValue, User, role } from '@app/global/entities/User';
+import {
+  RoleValue, SocialProvider, User, role, socialProvider,
+} from '@app/global/entities/User';
 
 export class UserEntity implements User {
     id: number;
@@ -24,4 +26,7 @@ export class UserEntity implements User {
 
     @IsString()
     password: string;
+
+    @IsIn(Object.values(socialProvider))
+    socialProvider: SocialProvider;
 }

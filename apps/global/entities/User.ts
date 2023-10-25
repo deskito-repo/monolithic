@@ -1,4 +1,4 @@
-export type RoleKey = 'ADMIN' | 'STAFF' | 'NORMAL';
+type RoleKey = 'ADMIN' | 'STAFF' | 'NORMAL';
 export type RoleValue = 1 | 2 | 3;
 export type Role = RoleValue;
 
@@ -7,6 +7,15 @@ export const role = {
   STAFF: 2,
   NORMAL: 3,
 } as Record<RoleKey, RoleValue>;
+
+export type SocialProviderKey = 'GOOGLE' | 'KAKAO';
+type SocialProviderValue = 1 | 2;
+export type SocialProvider = SocialProviderValue;
+
+export const socialProvider = {
+  GOOGLE: 1,
+  KAKAO: 2,
+} satisfies Record<SocialProviderKey, SocialProviderValue>;
 
 export interface User {
     id: number;
@@ -17,6 +26,7 @@ export interface User {
     phoneNumber: string;
     /** @example 980216 */
     signUpYMD: string;
+    socialProvider: SocialProvider | null;
     password: string;
 }
 

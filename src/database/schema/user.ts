@@ -1,7 +1,7 @@
 import {
   varchar, serial, pgTable, smallint, integer,
 } from 'drizzle-orm/pg-core';
-import { Role, schema } from '../../../apps/global/entities/User';
+import { schema, type SocialProvider, type Role } from '../../../apps/global/entities/User';
 
 export const users = pgTable('users', {
   id: serial('id').primaryKey(),
@@ -24,6 +24,7 @@ export const usersDetail = pgTable('users_detail', {
   signUpYMD: varchar('sign_up_ymd_date', {
     length: schema.signUpYMD.max,
   }).notNull(),
+  socialProvider: smallint('social_provider').$type<SocialProvider>(),
 });
 
 const BCRYPT_HASH_LENGTH = 60;
