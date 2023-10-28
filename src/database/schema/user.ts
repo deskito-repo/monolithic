@@ -1,5 +1,5 @@
 import {
-  varchar, serial, pgTable, smallint, integer,
+  varchar, serial, pgTable, smallint, integer, timestamp,
 } from 'drizzle-orm/pg-core';
 import { schema, type SocialProvider, type Role } from '../../../apps/global/entities/User';
 
@@ -21,9 +21,7 @@ export const usersDetail = pgTable('users_detail', {
   phoneNumber: varchar('phone_number', {
     length: schema.phoneNumber.max,
   }).notNull(),
-  signUpYMD: varchar('sign_up_ymd_date', {
-    length: schema.signUpYMD.max,
-  }).notNull(),
+  signUpDate: timestamp('sign_up_date', { precision: 0 }).notNull(),
   socialProvider: smallint('social_provider').$type<SocialProvider>(),
 });
 

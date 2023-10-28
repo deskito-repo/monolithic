@@ -33,7 +33,7 @@ export class UserService {
     return this.userRepository.insertOne({
       ...user,
       password: hashed,
-      signUpYMD: dayjs().format('YYMMDD'),
+      signUpDate: dayjs().toDate(),
     });
   }
 

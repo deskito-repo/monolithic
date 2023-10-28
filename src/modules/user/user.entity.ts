@@ -1,9 +1,10 @@
-import { IsIn, IsString } from 'class-validator';
+import { IsDate, IsIn, IsString } from 'class-validator';
 import {
   RoleValue, SocialProvider, User, role, socialProvider,
 } from '@app/global/entities/User';
 
 export class UserEntity implements User {
+    signUpDate: Date;
     id: number;
 
     @IsString()
@@ -20,9 +21,6 @@ export class UserEntity implements User {
 
     @IsString()
     phoneNumber: string;
-
-    @IsString()
-    signUpYMD: string;
 
     @IsString()
     password: string;

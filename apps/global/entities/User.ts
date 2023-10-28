@@ -24,8 +24,7 @@ export interface User {
     name: string;
     role: Role;
     phoneNumber: string;
-    /** @example 980216 */
-    signUpYMD: string;
+    signUpDate: Date;
     socialProvider: SocialProvider | null;
     password: string;
 }
@@ -50,10 +49,6 @@ export const schema = {
   phoneNumber: {
     min: 11,
     max: 20,
-  },
-  signUpYMD: {
-    min: 6,
-    max: 6,
   },
 } satisfies Partial<Record<keyof User, {
   min: number;

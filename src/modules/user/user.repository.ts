@@ -3,7 +3,7 @@ import { eq } from 'drizzle-orm';
 import db from 'src/database/db';
 import { users, usersDetail, usersSecret } from 'src/database/schema/user';
 import * as API from '@app/global/APIs/user.api';
-import { role } from '@app/global/entities/User';
+import { User, role } from '@app/global/entities/User';
 import * as bcrypt from 'bcryptjs';
 
 @Injectable()
@@ -53,7 +53,7 @@ export class UserRepository {
     };
   }
 
-  async insertOne(params: API.InsertOne.Request & { signUpYMD: string }) {
+  async insertOne(params: API.InsertOne.Request & Pick<User, 'signUpDate'>) {
     return db.transaction(async (tx) => {
       const {
         nickname, userId, password, ...restParams
