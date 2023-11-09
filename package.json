@@ -42,7 +42,7 @@
     "class-validator": "^0.14.0",
     "cross-env": "^7.0.3",
     "dayjs": "^1.11.10",
-    "drizzle-kit": "^0.19.13",
+    "drizzle-kit": "^0.20.0",
     "drizzle-orm": "^0.28.6",
     "fastify": "^4.24.3",
     "nest-typed-config": "^2.7.0",
