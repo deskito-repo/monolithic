@@ -46,7 +46,7 @@
     "drizzle-orm": "^0.29.0",
     "fastify": "^4.24.3",
     "nest-typed-config": "^2.7.0",
-    "passport": "^0.6.0",
+    "passport": "^0.7.0",
     "passport-local": "^1.0.0",
     "pg": "^8.11.3",
     "pino-http": "^8.4.0",
