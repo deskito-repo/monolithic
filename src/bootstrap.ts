@@ -19,6 +19,7 @@ const createNestServer = async () => {
     new FastifyAdapter({
       disableRequestLogging: true,
       bodyLimit: 5242880 /* 5MB */,
+      ignoreTrailingSlash: true,
     }),
   );
   const { httpAdapter } = app.get(HttpAdapterHost);
