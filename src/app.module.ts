@@ -5,6 +5,7 @@ import { Config } from './config';
 import { AuthModule } from './modules/auth/auth.module';
 import { UserModule } from './modules/user/user.module';
 import { SessionModule } from './modules/session/session.module';
+import { SuggestModule } from './modules/suggestion/suggestion.module';
 
 @Module({
   imports: [
@@ -17,6 +18,7 @@ import { SessionModule } from './modules/session/session.module';
     AuthModule,
     UserModule,
     SessionModule,
+    SuggestModule,
   ],
   controllers: [AppController],
 })
