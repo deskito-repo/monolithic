@@ -1,5 +1,4 @@
 version: '3.8'
-
 services:
   # db:
   #   container_name: db
@@ -17,8 +16,8 @@ services:
   #     - .cache/.postgresql:/var/lib/postgresql
   #   networks:
   #     - app-net
-  nestjs:
-    container_name: nestjs
+  monolith:
+    container_name: deskito-monolith
     build:
       dockerfile: ./ci/Dockerfile.dev
     ports:
@@ -32,10 +31,10 @@ services:
       - ./.env
     # depends_on:
     #   - db
-    command: pnpm dev:entrypoint
+    command: pnpm dev
     networks:
-      - app-net
+      - deskito
 
 networks:
-  app-net:
+  deskito:
     external: true
