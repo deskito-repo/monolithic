@@ -22,6 +22,8 @@ const createNestServer = async () => {
       ignoreTrailingSlash: true,
     }),
   );
+  /** 개 병신같은 firebase때문 */
+  app.setGlobalPrefix('api');
   const { httpAdapter } = app.get(HttpAdapterHost);
   const fastify = httpAdapter.getInstance();
   const config = app.get(Config);
