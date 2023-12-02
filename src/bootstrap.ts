@@ -53,7 +53,7 @@ const createNestServer = async () => {
   );
 
   if (isDev) {
-    app.useGlobalFilters(new AllExceptionsFilter(httpAdapter));
+    app.useGlobalFilters(new AllExceptionsFilter());
   }
   const logger = new Logger('Bootstrap');
   const { host, port } = config;
