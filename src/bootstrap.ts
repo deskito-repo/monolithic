@@ -11,7 +11,6 @@ import { Logger, ValidationPipe } from '@nestjs/common';
 import fastifyCookie from '@fastify/cookie';
 import { AppModule } from './app.module';
 import { Config } from './config';
-import { AllExceptionsFilter } from './filters/all-exceptions.filter';
 
 const createNestServer = async () => {
   const app = await NestFactory.create<NestFastifyApplication>(
@@ -54,9 +53,6 @@ const createNestServer = async () => {
     }),
   );
 
-  if (isDev) {
-    app.useGlobalFilters(new AllExceptionsFilter());
-  }
   const logger = new Logger('Bootstrap');
   const { host, port } = config;
   const boot = async () => {
