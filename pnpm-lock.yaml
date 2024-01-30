@@ -12,8 +12,8 @@ importers:
         specifier: latest
         version: 0.0.12(@typescript-eslint/eslint-plugin@6.18.0)(eslint-config-airbnb-base@15.0.0)(eslint-plugin-import@2.28.1)
       '@fastify/compress':
-        specifier: ^6.4.0
-        version: 6.4.0
+        specifier: ^7.0.0
+        version: 7.0.0
       '@fastify/cookie':
         specifier: ^9.1.0
         version: 9.1.0
@@ -1124,14 +1124,14 @@ packages:
     engines: {node: '>=14'}
     dev: false
 
-  /@fastify/compress@6.4.0:
-    resolution: {integrity: sha512-9zsljrMmv1mf/r+a+tQQbNJz6++jzsTUVGtJxNKnhd9LXNJNGwTJ3bndkcpJYiG/AoWHwsHGYjB13JnQhR/yNw==}
+  /@fastify/compress@7.0.0:
+    resolution: {integrity: sha512-jo/NaBVHP1OXIf8Kmr3bZyYQB0gAIgcy5c8rRKTPjhklHO7lRs/6ZFckUVT0NtbKSvrTuIcmSkxYpjyv3FNHXA==}
     dependencies:
       '@fastify/accept-negotiator': 1.1.0
       fastify-plugin: 4.5.1
       into-stream: 6.0.0
       mime-db: 1.52.0
-      minipass: 6.0.2
+      minipass: 7.0.3
       peek-stream: 1.1.3
       pump: 3.0.0
       pumpify: 2.0.1
@@ -5974,11 +5974,6 @@ packages:
   /minipass@5.0.0:
     resolution: {integrity: sha512-3FnjYuehv9k6ovOEbyOswadCDPX1piCfhV8ncmYtHOjuPwylVWsghTLo7rabjC3Rx5xD4HDx8Wm1xnMF7S5qFQ==}
     engines: {node: '>=8'}
-    dev: false
-
-  /minipass@6.0.2:
-    resolution: {integrity: sha512-MzWSV5nYVT7mVyWCwn2o7JH13w2TBRmmSqSRCKzTw+lmft9X4z+3wjvs06Tzijo5z4W/kahUCDpRXTF+ZrmF/w==}
-    engines: {node: '>=16 || 14 >=14.17'}
     dev: false
 
   /minipass@7.0.3:
