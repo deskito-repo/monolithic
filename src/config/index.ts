@@ -1,4 +1,4 @@
-import { Transform } from 'class-transformer';
+import { Type } from 'class-transformer';
 import {
   IsBoolean, IsInt, IsString,
 } from 'class-validator';
@@ -7,11 +7,19 @@ export class Config {
   public readonly appName = 'nestjs-boilerplate';
 
   @IsString()
-  public readonly host: string = '0.0.0.0';
+  private readonly Host: string = '0.0.0.0';
+
+  public get host() {
+    return this.Host;
+  }
 
   @IsInt()
-  @Transform(({ value }) => global.parseInt(value))
-  public readonly port: number = 8080;
+  @Type(() => Number)
+  private readonly PORT: number = 8080;
+
+  public get port() {
+    return this.PORT;
+  }
 
   @IsString()
   public readonly ENV: 'dev' | 'prod' = 'prod';
