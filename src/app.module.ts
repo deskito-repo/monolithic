@@ -18,9 +18,7 @@ import { WeatherModule } from './modules/weather/weather.module';
     TypedConfigModule.forRoot({
       schema: Config,
       load: process.env.ENV === 'dev'
-        ? dotenvLoader({
-          keyTransformer: (key: string) => key.toLowerCase(),
-        }) : [],
+        ? dotenvLoader() : [],
     }),
     SessionModule,
     AuthModule,

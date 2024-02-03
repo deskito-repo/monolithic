@@ -8,7 +8,7 @@ import { TokenService } from './token.service';
   imports: [
     JwtModule.registerAsync({
       inject: [Config],
-      useFactory: async (config: Config) => ({ secret: config.token_secret }),
+      useFactory: async (config: Config) => ({ secret: config.TOKEN_SECRET }),
     }),
   ],
   providers: [SessionService, TokenService],
