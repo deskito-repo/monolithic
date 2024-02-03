@@ -58,4 +58,5 @@ jobs:
         --quiet
         --set-secrets=\
         TOKEN_SECRET=TOKEN_SECRET:latest,\
+        WEATHER_MAP_API_KEY=WEATHER_MAP_API_KEY:latest,\
         GCP_CREDENTIALS_KEY=GCP_CREDENTIALS_KEY:latest

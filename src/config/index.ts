@@ -29,6 +29,9 @@ export class Config {
   @IsString()
   readonly TOKEN_SECRET: string;
 
+  @IsString()
+  readonly WEATHER_MAP_API_KEY: string;
+
   get serverHost() {
     return this.isDev ? `http://127.0.0.1:${this.PORT}` : process.env.SERVER_HOST;
   }
