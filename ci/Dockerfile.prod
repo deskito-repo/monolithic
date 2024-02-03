@@ -2,6 +2,6 @@ FROM node:21-alpine
 WORKDIR /app
 EXPOSE 80
 COPY . .
-RUN yarn --production
-RUN yarn build
-CMD yarn start
+RUN pnpm --production
+RUN pnpm build
+CMD pnpm start
