@@ -3,7 +3,7 @@ import {
   char, pgTable, timestamp, uniqueIndex, varchar,
 } from 'drizzle-orm/pg-core';
 import { userValidation } from '@global/validations/user.validation';
-import { sesionValidation as v } from '@global/validations/session.validation';
+import { sessionValidation as v } from '@global/validations/session.validation';
 import { relations } from 'drizzle-orm';
 import { user } from './user.schema';
 

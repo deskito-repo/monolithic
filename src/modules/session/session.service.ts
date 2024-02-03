@@ -3,7 +3,7 @@ import { Injectable, UnauthorizedException, Logger } from '@nestjs/common';
 import { SessionRepository } from 'src/database/repositories/session.repository';
 import { nanoid } from 'nanoid';
 import dayjs = require('dayjs');
-import { sesionValidation as v } from '@global/validations/session.validation';
+import { sessionValidation as v } from '@global/validations/session.validation';
 import { REFRESH_TOKEN_EXPIRES } from './session.constant';
 
 @Injectable()
