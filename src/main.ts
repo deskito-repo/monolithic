@@ -88,11 +88,11 @@ const boot = async () => {
     app.useGlobalFilters(new AllExceptionsFilter(httpAdapter));
   }
   const logger = new Logger('Bootstrap');
-  const { host, port } = config;
+  const { HOST, PORT } = config;
   const listen = async () => {
-    await app.listen(port, host);
+    await app.listen(PORT, HOST);
     if (isDev) {
-      logger.log(`⚡ http://${host}:${port}`);
+      logger.log(`⚡ http://${HOST}:${PORT}`);
     }
     return app;
   };
