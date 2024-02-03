@@ -56,3 +56,6 @@ jobs:
         --execution-environment=gen1
         --allow-unauthenticated
         --quiet
+        --set-secrets=\
+        TOKEN_SECRET=TOKEN_SECRET:latest,\
+        GCP_CREDENTIALS_KEY=GCP_CREDENTIALS_KEY:latest
