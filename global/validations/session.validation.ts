@@ -1,4 +1,4 @@
-export const sesionValidation = {
+export const sessionValidation = {
   id: {
     len: 20,
   },
