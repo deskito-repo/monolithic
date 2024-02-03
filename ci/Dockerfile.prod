@@ -3,6 +3,6 @@ WORKDIR /app
 EXPOSE 80
 COPY . .
 RUN npm i -g pnpm
-RUN pnpm i --prod
+RUN pnpm i
 RUN pnpm build
 CMD pnpm start
