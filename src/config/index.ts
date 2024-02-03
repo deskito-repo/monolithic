@@ -15,7 +15,7 @@ export class Config {
 
   @IsInt()
   @Type(() => Number)
-  private readonly PORT: number = 8080;
+  private readonly PORT: number = 80;
 
   public get port() {
     return this.PORT;
