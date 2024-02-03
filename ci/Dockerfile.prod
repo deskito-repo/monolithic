@@ -2,6 +2,6 @@ FROM node:21-alpine
 WORKDIR /app
 EXPOSE 80
 COPY . .
-RUN pnpm --production
+RUN pnpm --prod
 RUN pnpm build
 CMD pnpm start
