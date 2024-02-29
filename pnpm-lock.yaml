@@ -127,7 +127,7 @@ importers:
         version: 7.8.1
       ts-loader:
         specifier: ^9.4.4
-        version: 9.4.4(typescript@5.2.2)(webpack@5.90.3)
+        version: 9.5.1(typescript@5.2.2)(webpack@5.90.3)
     devDependencies:
       '@nestjs/schematics':
         specifier: ^10.0.2
@@ -8087,17 +8087,18 @@ packages:
       yargs-parser: 21.1.1
     dev: true
 
-  /ts-loader@9.4.4(typescript@5.2.2)(webpack@5.90.3):
-    resolution: {integrity: sha512-MLukxDHBl8OJ5Dk3y69IsKVFRA/6MwzEqBgh+OXMPB/OD01KQuWPFd1WAQP8a5PeSCAxfnkhiuWqfmFJzJQt9w==}
+  /ts-loader@9.5.1(typescript@5.2.2)(webpack@5.90.3):
+    resolution: {integrity: sha512-rNH3sK9kGZcH9dYzC7CewQm4NtxJTjSEVRJ2DyBZR7f8/wcta+iV44UPCXc5+nzDzivKtlzV6c9P4e+oFhDLYg==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
       typescript: '*'
       webpack: ^5.0.0
     dependencies:
       chalk: 4.1.2
-      enhanced-resolve: 5.15.0
+      enhanced-resolve: 5.15.1
       micromatch: 4.0.5
-      semver: 7.5.4
+      semver: 7.6.0
+      source-map: 0.7.4
       typescript: 5.2.2
       webpack: 5.90.3(@swc/core@1.4.2)(esbuild@0.19.11)
     dev: false
