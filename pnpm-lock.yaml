@@ -97,7 +97,7 @@ importers:
         version: 3.3.7
       nest-typed-config:
         specifier: ^2.7.0
-        version: 2.9.2(@nestjs/common@10.3.3)(axios@1.6.7)(reflect-metadata@0.2.1)(rxjs@7.8.1)(typescript@5.3.3)
+        version: 2.9.3(@nestjs/common@10.3.3)(axios@1.6.7)(reflect-metadata@0.2.1)(rxjs@7.8.1)(typescript@5.3.3)
       passport:
         specifier: ^0.7.0
         version: 0.7.0
@@ -6585,11 +6585,11 @@ packages:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
     dev: false
 
-  /nest-typed-config@2.9.2(@nestjs/common@10.3.3)(axios@1.6.7)(reflect-metadata@0.2.1)(rxjs@7.8.1)(typescript@5.3.3):
-    resolution: {integrity: sha512-U2wUWE+MEmDyaagorjNcrDwMRyH8LF+T2+UJBoVVwAALM/Jo2Kp0cVL91PXoQlEUiBoyg0RSZaHzFtYolqtiIg==}
+  /nest-typed-config@2.9.3(@nestjs/common@10.3.3)(axios@1.6.7)(reflect-metadata@0.2.1)(rxjs@7.8.1)(typescript@5.3.3):
+    resolution: {integrity: sha512-hmng90IrSMHNzibrmDJyC1WThZulAcdpEtil2sHd0Tgwkh2ZJvGoU4gbtZ0v0uqFUXezK+ODv2TosyFd50NDBQ==}
     peerDependencies:
       '@nestjs/common': '>= 6.10.0 < 11'
-      reflect-metadata: ^0.1.12
+      reflect-metadata: '>= 0.1.12 < 0.3'
       rxjs: '>= 6.0.0 < 8'
     dependencies:
       '@nestjs/common': 10.3.3(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.1)(rxjs@7.8.1)
