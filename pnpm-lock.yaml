@@ -84,8 +84,8 @@ importers:
         specifier: '=0.20.14'
         version: 0.20.14
       drizzle-orm:
-        specifier: '=0.29.5'
-        version: 0.29.5(@types/pg@8.11.2)(pg@8.11.3)
+        specifier: '=0.30.0'
+        version: 0.30.0(@types/pg@8.11.2)(pg@8.11.3)
       eslint-plugin-drizzle:
         specifier: ^0.2.3
         version: 0.2.3(eslint@8.57.0)
@@ -4010,8 +4010,8 @@ packages:
       - supports-color
     dev: false
 
-  /drizzle-orm@0.29.5(@types/pg@8.11.2)(pg@8.11.3):
-    resolution: {integrity: sha512-jS3+uyzTz4P0Y2CICx8FmRQ1eplURPaIMWDn/yq6k4ShRFj9V7vlJk67lSf2kyYPzQ60GkkNGXcJcwrxZ6QCRw==}
+  /drizzle-orm@0.30.0(@types/pg@8.11.2)(pg@8.11.3):
+    resolution: {integrity: sha512-SupNouCdvosjzQpLinqnyIu7bBfsUKiaWXfUZ0IyDtwK8rWa2zQ4AOWCda86VJVxgb8xZ1l8vKvlLHyTBalB/g==}
     peerDependencies:
       '@aws-sdk/client-rds-data': '>=3'
       '@cloudflare/workers-types': '>=3'
