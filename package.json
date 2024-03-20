@@ -57,7 +57,7 @@
     "passport-twitter": "^1.0.4",
     "pg": "^8.11.3",
     "pino-http": "^9.0.0",
-    "pino-pretty": "^10.2.0",
+    "pino-pretty": "^11.0.0",
     "reflect-metadata": "^0.2.0",
     "rxjs": "^7.8.1",
     "ts-loader": "^9.4.4"
