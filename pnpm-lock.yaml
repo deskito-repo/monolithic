@@ -13,7 +13,7 @@ importers:
         version: 0.0.25(@typescript-eslint/parser@7.4.0)(eslint@8.57.0)(typescript@5.4.3)
       '@fastify/compress':
         specifier: ^7.0.0
-        version: 7.0.1
+        version: 7.0.2
       '@fastify/cookie':
         specifier: ^9.1.0
         version: 9.3.1
@@ -1316,8 +1316,8 @@ packages:
       fast-uri: 2.3.0
     dev: false
 
-  /@fastify/compress@7.0.1:
-    resolution: {integrity: sha512-Vj7DyXxdVRJD84Z/MxFz+lBWnFL1y892grSw8tdBFKZiPY+oM1LqjTjLzgwVqkviNhUsiE4xxVtiRDz6IrnL6w==}
+  /@fastify/compress@7.0.2:
+    resolution: {integrity: sha512-DpSlM/1dXfTlGH7GRRuFs1z3zZWSOwmhiKpa6GdJF40tERxfc8wydrWxRVlZsTb4ebS/PemHLio1AuGPFRFZDQ==}
     dependencies:
       '@fastify/accept-negotiator': 1.1.0
       fastify-plugin: 4.5.1
