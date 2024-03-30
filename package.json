@@ -68,7 +68,7 @@
     "@swc/cli": "^0.3.0",
     "@swc/core": "^1.3.80",
     "@types/jest": "29.5.12",
-    "@types/node": "20.11.30",
+    "@types/node": "20.12.2",
     "@types/passport-google-oauth20": "^2.0.14",
     "@types/passport-naver": "^1.0.4",
     "@types/passport-twitter": "^1.0.40",
