@@ -28,7 +28,7 @@ importers:
         version: 9.1.0
       '@fastify/session':
         specifier: ^10.7.0
-        version: 10.7.1
+        version: 10.7.2
       '@fastify/static':
         specifier: ^7.0.0
         version: 7.0.3
@@ -924,8 +924,8 @@ packages:
   '@fastify/send@2.1.0':
     resolution: {integrity: sha512-yNYiY6sDkexoJR0D8IDy3aRP3+L4wdqCpvx5WP+VtEU58sn7USmKynBzDQex5X42Zzvw2gNzzYgP90UfWShLFA==}
 
-  '@fastify/session@10.7.1':
-    resolution: {integrity: sha512-7useheNpXAMvPb5AmqjUvdkOqfABfgU+je3fvu3uqZt2uZ8ZTLZU0ogmLtSDd0QJ7vksnUzp7AutjztilEp3sQ==}
+  '@fastify/session@10.7.2':
+    resolution: {integrity: sha512-PezR26nY8FMmAs4cww5rpnVyRkPDv2WQcVBLEKrtLTQy8mjL+twUKv9TLo/SXZYHZOIETzmquWoLYlnY3dSb+w==}
 
   '@fastify/static@7.0.3':
     resolution: {integrity: sha512-2tmTdF+uFCykasutaO6k4/wOt7eXyi7m3dGuCPo5micXzv0qt6ttb/nWnDYL/BlXjYGfp1JI4a1gyluTIylvQA==}
@@ -5446,7 +5446,7 @@ snapshots:
       http-errors: 2.0.0
       mime: 3.0.0
 
-  '@fastify/session@10.7.1':
+  '@fastify/session@10.7.2':
     dependencies:
       fastify-plugin: 4.5.1
       safe-stable-stringify: 2.4.3
