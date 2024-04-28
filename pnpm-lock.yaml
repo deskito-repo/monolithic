@@ -79,7 +79,7 @@ importers:
         version: 7.0.3
       dayjs:
         specifier: ^1.11.10
-        version: 1.11.10
+        version: 1.11.11
       drizzle-kit:
         specifier: '=0.20.17'
         version: 0.20.17
@@ -1196,6 +1196,7 @@ packages:
   '@swc/core@1.5.2':
     resolution: {integrity: sha512-dNLte04wMEZvpgGHLmTaFr4in94AL2nYF0CuRQKODfbv3ROR8P/nSTQARXUzGUlcDS/OBMJz1ZgsCR2ggqfaAQ==}
     engines: {node: '>=10'}
+    deprecated: Mac OS installation is broken
     peerDependencies:
       '@swc/helpers': ^0.5.0
     peerDependenciesMeta:
@@ -2033,8 +2034,8 @@ packages:
   dateformat@4.6.3:
     resolution: {integrity: sha512-2P0p0pFGzHS5EMnhdxQi7aJN+iMheud0UhG4dlE1DLAlvL8JHjJJTX/CSm4JXwV0Ka5nGk3zC5mcb5bUQUxxMA==}
 
-  dayjs@1.11.10:
-    resolution: {integrity: sha512-vjAczensTgRcqDERK0SR2XMwsF/tSvnvlv6VcF2GIhg6Sx4yOIt/irsr1RDJsKiIyBzJDpCoXiWWq28MqH2cnQ==}
+  dayjs@1.11.11:
+    resolution: {integrity: sha512-okzr3f11N6WuqYtZSvm+F776mB41wRZMhKP+hc34YdW+KmtYYK9iqvHSwo2k9FEH3fhGXvOPV6yz2IcSrfRUDg==}
 
   debug@3.2.7:
     resolution: {integrity: sha512-CFjzYYAi4ThfiQvizrFQevTTXHtnCqWfe7x1AhgEscTz6ZbLbfoLRLPugTQyBth6f8ZERVUSyWHFD/7Wu4t1XQ==}
@@ -6770,7 +6771,7 @@ snapshots:
 
   dateformat@4.6.3: {}
 
-  dayjs@1.11.10: {}
+  dayjs@1.11.11: {}
 
   debug@3.2.7:
     dependencies:
