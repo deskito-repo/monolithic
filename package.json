@@ -46,7 +46,7 @@
     "cross-env": "^7.0.3",
     "dayjs": "^1.11.10",
     "drizzle-kit": "=0.20.17",
-    "drizzle-orm": "=0.30.9",
+    "drizzle-orm": "=0.30.10",
     "eslint-plugin-drizzle": "^0.2.3",
     "fastify": "^4.24.3",
     "nanoid": "~3.3.7",
