@@ -149,7 +149,7 @@ importers:
         version: 20.12.8
       '@types/passport-google-oauth20':
         specifier: ^2.0.14
-        version: 2.0.14
+        version: 2.0.15
       '@types/passport-naver':
         specifier: ^1.0.4
         version: 1.0.4
@@ -1384,11 +1384,17 @@ packages:
   '@types/body-parser@1.19.2':
     resolution: {integrity: sha512-ALYone6pm6QmwZoAgeyNksccT9Q4AWZQ6PvfwR37GT6r6FWUPguq6sUmNGSMV2Wr761oQoBxwGGa6DR5o1DC9g==}
 
+  '@types/body-parser@1.19.5':
+    resolution: {integrity: sha512-fB3Zu92ucau0iQ0JMCFQE7b/dv8Ot07NI3KaZIkIUNXq82k4eBAqUaneXfleGY9JWskeS9y+u0nXMyspcuQrCg==}
+
   '@types/cacheable-request@6.0.3':
     resolution: {integrity: sha512-IQ3EbTzGxIigb1I3qPZc1rWJnH0BmSKv5QYTalEwweFvyBDLSAe24zP0le/hyi7ecGfZVlIVAg4BZqb8WBwKqw==}
 
   '@types/connect@3.4.35':
     resolution: {integrity: sha512-cdeYyv4KWoEgpBISTxWvqYsVy444DOqehiF3fM3ne10AmJ62RSyNkUnxMJXHQWRQQX2eR94m5y1IZyDwBjV9FQ==}
+
+  '@types/connect@3.4.38':
+    resolution: {integrity: sha512-K6uROf1LD88uDQqJCktA4yzL1YYAK6NgfsI0v/mTgyPKWsX1CnJ0XPSDhViejru1GcRkLWb8RlzFYJRqGUbaug==}
 
   '@types/cookiejar@2.1.5':
     resolution: {integrity: sha512-he+DHOWReW0nghN24E1WUqM0efK4kI9oTqDm6XmK8ZPe2djZ90BSNdGnIyCLzCPw7/pogPlGbzI2wHGGmi4O/Q==}
@@ -1405,8 +1411,14 @@ packages:
   '@types/express-serve-static-core@4.17.36':
     resolution: {integrity: sha512-zbivROJ0ZqLAtMzgzIUC4oNqDG9iF0lSsAqpOD9kbs5xcIM3dTiyuHvBc7R8MtWBp3AAWGaovJa+wzWPjLYW7Q==}
 
+  '@types/express-serve-static-core@4.19.0':
+    resolution: {integrity: sha512-bGyep3JqPCRry1wq+O5n7oiBgGWmeIJXPjXXCo8EK0u8duZGSYar7cGqd3ML2JUsLGeB7fmc06KYo9fLGWqPvQ==}
+
   '@types/express@4.17.17':
     resolution: {integrity: sha512-Q4FmmuLGBG58btUnfS1c1r/NQdlp3DMfGDGig8WhfpA2YRUtEkxAjkZb0yvplJGYdF1fsQ81iMDcH24sSCNC/Q==}
+
+  '@types/express@4.17.21':
+    resolution: {integrity: sha512-ejlPM315qwLpaQlQDTjPdsUFSc6ZsP4AN6AlWnogPjQ7CVi7PYF3YVz+CY3jE2pwYf7E/7HlDAN0rV2GxTG0HQ==}
 
   '@types/graceful-fs@4.1.6':
     resolution: {integrity: sha512-Sig0SNORX9fdW+bQuTEovKj3uHcUL6LQKbCrrqb1X7J6/ReAbhCXRAhc+SMejhLELFj2QcyuxmUooZ4bt5ReSw==}
@@ -1416,6 +1428,9 @@ packages:
 
   '@types/http-errors@2.0.1':
     resolution: {integrity: sha512-/K3ds8TRAfBvi5vfjuz8y6+GiAYBZ0x4tXv1Av6CWBWn0IlADc+ZX9pMq7oU0fNQPnBwIZl3rmeLp6SBApbxSQ==}
+
+  '@types/http-errors@2.0.4':
+    resolution: {integrity: sha512-D0CFMMtydbJAegzOyHjtiKPLlvnm3iTZyZRSZoLq2mRhDdmLfIWOCYPfQJ4cu2erKghU++QvjcUjp/5h7hESpA==}
 
   '@types/istanbul-lib-coverage@2.0.4':
     resolution: {integrity: sha512-z/QT1XN4K4KYuslS23k62yDIDLwLFkzxOuMplDtObz0+y7VqJCaO2o+SPwHCvLFZh7xazvvoor2tA/hPz9ee7g==}
@@ -1447,6 +1462,9 @@ packages:
   '@types/mime@1.3.2':
     resolution: {integrity: sha512-YATxVxgRqNH6nHEIsvg6k2Boc1JHI9ZbH5iWFFv/MTkchz3b1ieGDa5T0a9RznNdI0KhVbdbWSN+KWWrQZRxTw==}
 
+  '@types/mime@1.3.5':
+    resolution: {integrity: sha512-/pyBZWSLD2n0dcHE3hq8s8ZvcETHtEuF+3E7XVt0Ig2nvsVQXdghHVcEkIWjy9A0wKfTn97a/PSDYohKIlnP/w==}
+
   '@types/mime@3.0.1':
     resolution: {integrity: sha512-Y4XFY5VJAuw0FgAqPNd6NNoV44jbq9Bz2L7Rh/J6jLTiHBSBJa9fxqQIvkIld4GsoDOcCbvzOUAbLPsSKKg+uA==}
 
@@ -1459,8 +1477,8 @@ packages:
   '@types/oauth@0.9.4':
     resolution: {integrity: sha512-qk9orhti499fq5XxKCCEbd0OzdPZuancneyse3KtR+vgMiHRbh+mn8M4G6t64ob/Fg+GZGpa565MF/2dKWY32A==}
 
-  '@types/passport-google-oauth20@2.0.14':
-    resolution: {integrity: sha512-ZaZpRUAeMl3vy298ulKO1wGLn9SQtj/CyIfZL/Px5xU9pybMiQU3mhXDCBiWSbg0EK9uXT4ZoWC3ktuWY+5fwQ==}
+  '@types/passport-google-oauth20@2.0.15':
+    resolution: {integrity: sha512-//QqtSn4rxB9nfqyTjMK4MIJ8JTQ7+HL2DyvOxoj0yWIo2FF8v7MU34hrZwUqzVEWkyVRBPIjx7+uqF2u94L9Q==}
 
   '@types/passport-naver@1.0.4':
     resolution: {integrity: sha512-QcqccZxXUjSIkF/AdGsgWXS2jOfDuhs4ClmWht3PnFoujxoMkET3eR9KbXL8gdyOAELg1yKu8LhMnMwAbza1cw==}
@@ -1474,14 +1492,23 @@ packages:
   '@types/passport@1.0.12':
     resolution: {integrity: sha512-QFdJ2TiAEoXfEQSNDISJR1Tm51I78CymqcBa8imbjo6dNNu+l2huDxxbDEIoFIwOSKMkOfHEikyDuZ38WwWsmw==}
 
+  '@types/passport@1.0.16':
+    resolution: {integrity: sha512-FD0qD5hbPWQzaM0wHUnJ/T0BBCJBxCeemtnCwc/ThhTg3x9jfrAcRUmj5Dopza+MfFS9acTe3wk7rcVnRIp/0A==}
+
   '@types/pg@8.11.5':
     resolution: {integrity: sha512-2xMjVviMxneZHDHX5p5S6tsRRs7TpDHeeK7kTTMe/kAC/mRRNjWHjZg0rkiY+e17jXSZV3zJYDxXV8Cy72/Vuw==}
+
+  '@types/qs@6.9.15':
+    resolution: {integrity: sha512-uXHQKES6DQKKCLh441Xv/dwxOq1TVS3JPUMlEqoEglvlhR6Mxnlew/Xq/LRVHpLyk7iK3zODe1qYHIMltO7XGg==}
 
   '@types/qs@6.9.7':
     resolution: {integrity: sha512-FGa1F62FT09qcrueBA6qYTrJPVDzah9a+493+o2PCXsesWHIn27G98TsSMs3WPNbZIEj4+VJf6saSFpvD+3Zsw==}
 
   '@types/range-parser@1.2.4':
     resolution: {integrity: sha512-EEhsLsD6UsDM1yFhAvy0Cjr6VwmpMWqFBCb9w07wVugF7w9nfajxLuVmngTIpgS6svCnm6Vaw+MZhoDCKnOfsw==}
+
+  '@types/range-parser@1.2.7':
+    resolution: {integrity: sha512-hKormJbkJqzQGhziax5PItDUTMAM9uE2XXQmM37dyd4hVM+5aVl7oVxMVUiVQn2oCQFN/LKCZdvSM0pFRqbSmQ==}
 
   '@types/responselike@1.0.3':
     resolution: {integrity: sha512-H/+L+UkTV33uf49PH5pCAUBVPNj2nDBXTN+qS1dOwyyg24l3CcicicCA7ca+HMvJBZcFgl5r8e+RR6elsb4Lyw==}
@@ -1492,8 +1519,14 @@ packages:
   '@types/send@0.17.1':
     resolution: {integrity: sha512-Cwo8LE/0rnvX7kIIa3QHCkcuF21c05Ayb0ZfxPiv0W8VRiZiNW/WuRupHKpqqGVGf7SUA44QSOUKaEd9lIrd/Q==}
 
+  '@types/send@0.17.4':
+    resolution: {integrity: sha512-x2EM6TJOybec7c52BX0ZspPodMsQUd5L6PRwOunVyVUhXiBSKf3AezDL8Dgvgt5o0UfKNfuA0eMLr2wLT4AiBA==}
+
   '@types/serve-static@1.15.2':
     resolution: {integrity: sha512-J2LqtvFYCzaj8pVYKw8klQXrLLk7TBZmQ4ShlcdkELFKGwGMfevMLneMMRkMgZxotOD9wg497LpC7O8PcvAmfw==}
+
+  '@types/serve-static@1.15.7':
+    resolution: {integrity: sha512-W8Ym+h8nhuRwaKPaDw34QUkwsGi6Rc4yYqvKFo5rm2FUEhCFbzVWrxXUxuKK8TASjWsysJY0nsmNCGhCOIsrOw==}
 
   '@types/stack-utils@2.0.1':
     resolution: {integrity: sha512-Hl219/BT5fLAaz6NDkSuhzasy49dwQS/DSdu4MdggFB8zcXv7vflBI3xp7FEmkmdDkBUI2bPUNeMttp2knYdxw==}
@@ -6041,6 +6074,11 @@ snapshots:
       '@types/connect': 3.4.35
       '@types/node': 20.12.8
 
+  '@types/body-parser@1.19.5':
+    dependencies:
+      '@types/connect': 3.4.38
+      '@types/node': 20.12.8
+
   '@types/cacheable-request@6.0.3':
     dependencies:
       '@types/http-cache-semantics': 4.0.4
@@ -6049,6 +6087,10 @@ snapshots:
       '@types/responselike': 1.0.3
 
   '@types/connect@3.4.35':
+    dependencies:
+      '@types/node': 20.12.8
+
+  '@types/connect@3.4.38':
     dependencies:
       '@types/node': 20.12.8
 
@@ -6073,12 +6115,26 @@ snapshots:
       '@types/range-parser': 1.2.4
       '@types/send': 0.17.1
 
+  '@types/express-serve-static-core@4.19.0':
+    dependencies:
+      '@types/node': 20.12.8
+      '@types/qs': 6.9.15
+      '@types/range-parser': 1.2.7
+      '@types/send': 0.17.4
+
   '@types/express@4.17.17':
     dependencies:
       '@types/body-parser': 1.19.2
       '@types/express-serve-static-core': 4.17.36
       '@types/qs': 6.9.7
       '@types/serve-static': 1.15.2
+
+  '@types/express@4.17.21':
+    dependencies:
+      '@types/body-parser': 1.19.5
+      '@types/express-serve-static-core': 4.19.0
+      '@types/qs': 6.9.15
+      '@types/serve-static': 1.15.7
 
   '@types/graceful-fs@4.1.6':
     dependencies:
@@ -6087,6 +6143,8 @@ snapshots:
   '@types/http-cache-semantics@4.0.4': {}
 
   '@types/http-errors@2.0.1': {}
+
+  '@types/http-errors@2.0.4': {}
 
   '@types/istanbul-lib-coverage@2.0.4': {}
 
@@ -6119,6 +6177,8 @@ snapshots:
 
   '@types/mime@1.3.2': {}
 
+  '@types/mime@1.3.5': {}
+
   '@types/mime@3.0.1': {}
 
   '@types/node@20.12.6':
@@ -6133,10 +6193,10 @@ snapshots:
     dependencies:
       '@types/node': 20.12.8
 
-  '@types/passport-google-oauth20@2.0.14':
+  '@types/passport-google-oauth20@2.0.15':
     dependencies:
-      '@types/express': 4.17.17
-      '@types/passport': 1.0.12
+      '@types/express': 4.17.21
+      '@types/passport': 1.0.16
       '@types/passport-oauth2': 1.4.15
 
   '@types/passport-naver@1.0.4':
@@ -6146,9 +6206,9 @@ snapshots:
 
   '@types/passport-oauth2@1.4.15':
     dependencies:
-      '@types/express': 4.17.17
+      '@types/express': 4.17.21
       '@types/oauth': 0.9.4
-      '@types/passport': 1.0.12
+      '@types/passport': 1.0.16
 
   '@types/passport-twitter@1.0.40':
     dependencies:
@@ -6159,15 +6219,23 @@ snapshots:
     dependencies:
       '@types/express': 4.17.17
 
+  '@types/passport@1.0.16':
+    dependencies:
+      '@types/express': 4.17.21
+
   '@types/pg@8.11.5':
     dependencies:
       '@types/node': 20.12.6
       pg-protocol: 1.6.1
       pg-types: 4.0.2
 
+  '@types/qs@6.9.15': {}
+
   '@types/qs@6.9.7': {}
 
   '@types/range-parser@1.2.4': {}
+
+  '@types/range-parser@1.2.7': {}
 
   '@types/responselike@1.0.3':
     dependencies:
@@ -6180,11 +6248,22 @@ snapshots:
       '@types/mime': 1.3.2
       '@types/node': 20.12.8
 
+  '@types/send@0.17.4':
+    dependencies:
+      '@types/mime': 1.3.5
+      '@types/node': 20.12.8
+
   '@types/serve-static@1.15.2':
     dependencies:
       '@types/http-errors': 2.0.1
       '@types/mime': 3.0.1
       '@types/node': 20.12.8
+
+  '@types/serve-static@1.15.7':
+    dependencies:
+      '@types/http-errors': 2.0.4
+      '@types/node': 20.12.8
+      '@types/send': 0.17.4
 
   '@types/stack-utils@2.0.1': {}
 
