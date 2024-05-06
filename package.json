@@ -45,7 +45,7 @@
     "class-validator": "^0.14.0",
     "cross-env": "^7.0.3",
     "dayjs": "^1.11.10",
-    "drizzle-kit": "=0.20.17",
+    "drizzle-kit": "=0.20.18",
     "drizzle-orm": "=0.30.10",
     "eslint-plugin-drizzle": "^0.2.3",
     "fastify": "^4.24.3",
