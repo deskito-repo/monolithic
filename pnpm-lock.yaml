@@ -194,7 +194,7 @@ importers:
         version: 4.9.3
       type-fest:
         specifier: ^4.9.0
-        version: 4.18.1
+        version: 4.18.2
       typescript:
         specifier: ^5.2.2
         version: 5.4.5
@@ -4707,8 +4707,8 @@ packages:
     resolution: {integrity: sha512-t0rzBq87m3fVcduHDUFhKmyyX+9eo6WQjZvf51Ea/M0Q7+T374Jp1aUiyUl0GKxp8M/OETVHSDvmkyPgvX+X2w==}
     engines: {node: '>=10'}
 
-  type-fest@4.18.1:
-    resolution: {integrity: sha512-qXhgeNsX15bM63h5aapNFcQid9jRF/l3ojDoDFmekDQEUufZ9U4ErVt6SjDxnHp48Ltrw616R8yNc3giJ3KvVQ==}
+  type-fest@4.18.2:
+    resolution: {integrity: sha512-+suCYpfJLAe4OXS6+PPXjW3urOS4IoP9waSiLuXfLgqZODKw/aWwASvzqE886wA0kQgGy0mIWyhd87VpqIy6Xg==}
     engines: {node: '>=16'}
 
   type@1.2.0:
@@ -9068,7 +9068,7 @@ snapshots:
     dependencies:
       '@babel/code-frame': 7.23.5
       index-to-position: 0.1.2
-      type-fest: 4.18.1
+      type-fest: 4.18.2
     optional: true
 
   passport-google-oauth20@2.0.0:
@@ -9909,7 +9909,7 @@ snapshots:
 
   type-fest@0.21.3: {}
 
-  type-fest@4.18.1: {}
+  type-fest@4.18.2: {}
 
   type@1.2.0: {}
 
