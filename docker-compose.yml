@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  monolith:
+    build:
+      dockerfile: ./ci/Dockerfile.dev
+    ports:
+      - "${PORT}:${PORT}"
+      - "${DEBUG_PORT}:${DEBUG_PORT}"
+    volumes:
+      - ./:/server
+    env_file:
+      - ./.env
+    command: pnpm entrypoint
+    networks:
+      - deskito
+  #   depends_on:
+  #     - db
+  # db:
+  #   image: postgres:16
+  #   restart: always
+  #   environment:
+  #     POSTGRES_DB: ${DB_NAME}
+  #     POSTGRES_USER: ${DB_USER}
+  #     POSTGRES_PASSWORD: ${DB_PASSWORD}
+  #   ports:
+  #     - "5432:5432"
+  #   env_file:
+  #     - ./.env
+  #   volumes:
+  #     - .cache/.postgresql:/var/lib/postgresql
+  #   networks:
+  #     - deskito
+
+networks:
+  deskito:
+    external: true

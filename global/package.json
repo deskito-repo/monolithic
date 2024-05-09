@@ -1,0 +1,26 @@
+{
+  "name": "global",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "files": [
+    "*"
+  ],
+  "scripts": {
+    "build": "tsc && swc . -w --out-dir dist",
+    "watch-build": "nodemon --exec \"npm run build\""
+  },
+  "peerDependencies": {
+    "@nestjs/swagger": "^7.1.15"
+  },
+  "dependencies": {
+    "nestjs-valibot": "^0.0.9",
+    "valibot": "^0.30.0"
+  },
+  "devDependencies": {
+    "@binochoi/eslint-config-typescript": "^0.0.25",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.48.0"
+  }
+}

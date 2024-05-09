@@ -1,0 +1,16 @@
+{
+    "$schema": "https://json.schemastore.org/swcrc",
+    "sourceMaps": false,
+    "module": {
+      "type": "commonjs"
+    },
+    "jsc": {
+        "paths": {
+            "src/*": ["./src/*"],
+            "global/*": ["../global/*"]
+        },
+        "baseUrl": "."
+    },
+    "minify": false,
+    "exclude": ["node_modules"]
+}

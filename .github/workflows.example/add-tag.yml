@@ -1,0 +1,37 @@
+name: Add Commit Tag
+on:
+  push:
+    branches:
+      - develop
+    
+jobs:
+  release-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PAT }}
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: git global config
+        run: |
+          git config --global user.email "bonoself@gmail.com"
+          git config --global user.name "bino"
+      - name: patch version
+        run: |
+            npm version patch --git-tag-version false
+
+      - name: read package.json
+        id: info
+        uses: jaywcjlove/github-action-package@main
+
+      - uses: EndBug/add-and-commit@v9
+        with:
+          author_name: release[bot]
+          author_email: actions@github.com
+          message: 'tag: ${{ steps.info.outputs.version }}'
+          push: true
+          tag: '${{ steps.info.outputs.version }}'

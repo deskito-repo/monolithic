@@ -1,0 +1,32 @@
+name: Add changelog
+on:
+  push:
+    tags:
+      - '[0-9]+.[0-9]+.0'
+    
+jobs:
+  update-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PAT }}
+      - name: read package.json
+        id: info
+        uses: jaywcjlove/github-action-package@main
+
+      - name: Changelog CI
+        uses: saadmk11/changelog-ci@v1.1.2
+        with:
+          committer_username: 'release[bot]'
+          committer_email: 'actions@github.com'
+          release_version: ${{ steps.info.outputs.version }}
+          changelog_filename: CHANGELOG.rst
+          config_file: changelog.config.json
+          github_token: ${{ secrets.PAT }}
+          
+      - name: Get Changelog Output
+        run: |
+          echo "${{ steps.info.outputs.version }}"
+          echo "${{ steps.info.outputs.version }}" >> $GITHUB_STEP_SUMMARY

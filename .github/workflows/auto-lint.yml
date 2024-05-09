@@ -1,0 +1,26 @@
+name: auto-lint
+on:
+  push:
+    tags: 
+      - '*'
+  workflow_dispatch:
+jobs:
+  lint-by-bot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PAT }}
+        
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: lint
+        working-directory: app
+        run: npm run lint
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_author: linter[bot] <actions@github.com>
+          commit_message: 'style(lint):'
