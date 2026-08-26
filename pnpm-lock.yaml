@@ -29,9 +29,6 @@ importers:
       '@fastify/rate-limit':
         specifier: ^9.0.0
         version: 9.1.0
-      '@fastify/session':
-        specifier: ^10.7.0
-        version: 10.7.1
       '@fastify/static':
         specifier: ^7.0.0
         version: 7.0.3
@@ -118,7 +115,7 @@ importers:
         version: 2.9.3(@nestjs/common@10.3.7)(axios@1.6.8)(reflect-metadata@0.2.2)(rxjs@7.8.1)(typescript@5.4.5)
       nestjs-valibot:
         specifier: ^0.0.9
-        version: 0.0.9(@nestjs/common@10.3.7)(@nestjs/core@10.3.7)(valibot@0.30.0)
+        version: 0.0.9(@nestjs/common@10.3.7)(@nestjs/core@10.3.7)(valibot@1.4.2)
       passport:
         specifier: ^0.7.0
         version: 0.7.0
@@ -156,8 +153,8 @@ importers:
         specifier: ^0.0.5
         version: 0.0.5
       valibot:
-        specifier: ^0.30.0
-        version: 0.30.0
+        specifier: ^1.0.0
+        version: 1.4.2(typescript@5.4.5)
     devDependencies:
       '@nestjs/schematics':
         specifier: ^10.0.0
@@ -245,10 +242,10 @@ importers:
         version: 7.3.1(@fastify/static@7.0.3)(@nestjs/common@10.3.7)(@nestjs/core@10.3.7)(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)
       nestjs-valibot:
         specifier: ^0.0.9
-        version: 0.0.9(@nestjs/common@10.3.7)(@nestjs/core@10.3.7)(valibot@0.30.0)
+        version: 0.0.9(@nestjs/common@10.3.7)(@nestjs/core@10.3.7)(valibot@1.4.2)
       valibot:
-        specifier: ^0.30.0
-        version: 0.30.0
+        specifier: ^1.0.0
+        version: 1.4.2(typescript@5.4.5)
     devDependencies:
       '@binochoi/eslint-config-typescript':
         specifier: ^0.0.25
@@ -1246,13 +1243,6 @@ packages:
       fast-decode-uri-component: 1.0.1
       http-errors: 2.0.0
       mime: 3.0.0
-    dev: false
-
-  /@fastify/session@10.7.1:
-    resolution: {integrity: sha512-7useheNpXAMvPb5AmqjUvdkOqfABfgU+je3fvu3uqZt2uZ8ZTLZU0ogmLtSDd0QJ7vksnUzp7AutjztilEp3sQ==}
-    dependencies:
-      fastify-plugin: 4.5.1
-      safe-stable-stringify: 2.4.3
     dev: false
 
   /@fastify/static@7.0.3:
@@ -6928,7 +6918,7 @@ packages:
       - typescript
     dev: false
 
-  /nestjs-valibot@0.0.9(@nestjs/common@10.3.7)(@nestjs/core@10.3.7)(valibot@0.30.0):
+  /nestjs-valibot@0.0.9(@nestjs/common@10.3.7)(@nestjs/core@10.3.7)(valibot@1.4.2):
     resolution: {integrity: sha512-MnOCmssM8U7RWQ+W9BR7l7zBmOX4CPCgq3AGtxqmo3ezNDQzQRVyTeZAjKaAQIuThp8XgNMu371eijceQuetHg==}
     peerDependencies:
       '@nestjs/common': '>= 8.0.0'
@@ -6938,7 +6928,7 @@ packages:
       '@nestjs/common': 10.3.7(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1)
       '@nestjs/core': 10.3.7(@nestjs/common@10.3.7)(@nestjs/platform-express@10.3.7)(reflect-metadata@0.2.2)(rxjs@7.8.1)
       typescript: 5.4.5
-      valibot: 0.30.0
+      valibot: 1.4.2(typescript@5.4.5)
     dev: false
 
   /next-tick@1.1.0:
@@ -8842,8 +8832,15 @@ packages:
       convert-source-map: 2.0.0
     dev: true
 
-  /valibot@0.30.0:
-    resolution: {integrity: sha512-5POBdbSkM+3nvJ6ZlyQHsggisfRtyT4tVTo1EIIShs6qCdXJnyWU5TJ68vr8iTg5zpOLjXLRiBqNx+9zwZz/rA==}
+  /valibot@1.4.2(typescript@5.4.5):
+    resolution: {integrity: sha512-gjdCvJ6d3RyHAneqxMYMW9QMCwYMb3jpOO0IyHZV1bnRHFBHrX3VkIILt5XYR0WhwHiH7Mty8ovuPZ/O3gamrg==}
+    peerDependencies:
+      typescript: '>=5'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+    dependencies:
+      typescript: 5.4.5
     dev: false
 
   /validator@13.11.0:
