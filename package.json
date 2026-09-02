@@ -38,7 +38,7 @@
     "@nestjs/mapped-types": "^2.0.2",
     "@nestjs/passport": "^10.0.1",
     "@nestjs/platform-express": "^10.0.0",
-    "@nestjs/platform-fastify": "^10.2.1",
+    "@nestjs/platform-fastify": "^11.0.0",
     "@nestjs/swagger": "^7.1.17",
     "@swc/cli": "^0.3.0",
     "@swc/core": "^1.4.8",
